@@ -54,6 +54,7 @@
         </button>
       </div>
     </header>
+
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-overlay"></div>
@@ -75,6 +76,7 @@
         </div>
       </div>
     </section>
+
     <!-- About Section -->
     <section id="about" class="about-section">
       <div class="container about-container">
@@ -123,6 +125,7 @@
         </div>
       </div>
     </section>
+
     <!-- Services Section -->
     <section id="services" class="services-section">
       <div class="container">
@@ -378,7 +381,7 @@
         </div>
 
         <div class="contact-form-block">
-          <form class="contact-form">
+          <form class="contact-form" id="contactForm">
             <div class="form-group">
               <label for="name">Full Name</label>
               <input
@@ -452,6 +455,7 @@
         </div>
       </div>
     </footer>
+
     <!-- Floating WhatsApp Button -->
     <a
       href="https://wa.me/919743203909"
@@ -473,10 +477,11 @@
         <path d="M12 4l-8 8h5v8h6v-8h5z" />
       </svg>
     </button>
-    <script src="script.js"></script>
+
+    <!-- Application Script -->
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        // Mobile Menu Toggle
+        // Mobile Navigation Setup
         const menuToggle = document.getElementById("menuToggle");
         const navLinks = document.querySelector(".nav-links");
 
@@ -484,20 +489,21 @@
           menuToggle.addEventListener("click", () => {
             menuToggle.classList.toggle("active");
             navLinks.classList.toggle("active");
+            document.body.classList.toggle("no-scroll");
           });
 
-          // Close menu when clicking a link
+          // Close menu when clicking navigation links
           navLinks.querySelectorAll("a").forEach((link) => {
             link.addEventListener("click", () => {
               menuToggle.classList.remove("active");
               navLinks.classList.remove("active");
+              document.body.classList.remove("no-scroll");
             });
           });
         }
 
         // Scroll to Top Logic
         const scrollTopBtn = document.getElementById("scrollTopBtn");
-
         if (scrollTopBtn) {
           window.addEventListener("scroll", () => {
             if (window.scrollY > 300) {
@@ -514,15 +520,17 @@
             });
           });
         }
+
+        // Contact Form Submission Handler
+        const contactForm = document.getElementById("contactForm");
+        if (contactForm) {
+          contactForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            alert("Thank you for your enquiry. We will contact you shortly!");
+            contactForm.reset();
+          });
+        }
       });
-      const contactForm = document.getElementById("contactForm");
-      if (contactForm) {
-        contactForm.addEventListener("submit", (e) => {
-          e.preventDefault();
-          alert("Thank you for your enquiry. We will contact you shortly!");
-          contactForm.reset();
-        });
-      }
     </script>
   </body>
 </html>
