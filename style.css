@@ -881,3 +881,56 @@ a {
     right: 10px;
   }
 }
+/* ==========================================
+   FLOATING BUTTONS (WhatsApp Left & Scroll-Top Right)
+   ========================================== */
+.whatsapp-float,
+.scroll-top-btn {
+  position: fixed;
+  bottom: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+/* WhatsApp Icon - Bottom Left */
+.whatsapp-float {
+  left: 24px;
+  background-color: #25d366;
+  fill: #ffffff;
+}
+.whatsapp-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+/* Scroll to Top - Bottom Right */
+.scroll-top-btn {
+  right: 24px;
+  background-color: #1a1a1a;
+  fill: #ffffff;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+}
+.scroll-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+}
+.scroll-top-btn:hover {
+  background-color: #333333;
+  transform: translateY(-3px);
+}
+
+.whatsapp-icon,
+.arrow-up-icon {
+  width: 20px;
+  height: 20px;
+}
