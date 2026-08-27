@@ -378,13 +378,7 @@
         </div>
 
         <div class="contact-form-block">
-          <form
-            class="contact-form"
-            onsubmit="
-              event.preventDefault();
-              alert('Thank you for your enquiry. We will contact you shortly!');
-            "
-          >
+          <form class="contact-form">
             <div class="form-group">
               <label for="name">Full Name</label>
               <input
@@ -460,7 +454,7 @@
     </footer>
     <!-- Floating WhatsApp Button -->
     <a
-      href="https://wa.me/919876543210"
+      href="https://wa.me/919743203909"
       class="whatsapp-float"
       target="_blank"
       rel="noopener noreferrer"
@@ -521,6 +515,14 @@
           });
         }
       });
+      const contactForm = document.getElementById("contactForm");
+      if (contactForm) {
+        contactForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          alert("Thank you for your enquiry. We will contact you shortly!");
+          contactForm.reset();
+        });
+      }
     </script>
   </body>
 </html>
