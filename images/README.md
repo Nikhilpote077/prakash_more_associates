@@ -21,7 +21,7 @@ images/
 │   └── principal-prakash-more.jeg   → Replace with a real portrait of Prakash More
 │
 ├── hero/                  Full-width banner images, one per page
-│   ├── home-hero.jpg       Wide shot for the homepage hero (1920x1080+)
+│   ├── home-hero-n.jpg       Wide shot for the homepage hero (1920x1080+)
 │   ├── about-hero.jpg      About page banner (1920x700)
 │   ├── portfolio-hero.jpg  Portfolio page banner (1920x700)
 │   └── contact-hero.jpg    Contact page banner (1920x500)

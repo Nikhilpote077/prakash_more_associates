@@ -260,7 +260,9 @@ img {
   height: 2px;
   background-color: #ffffff;
   border-radius: 2px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .mobile-menu-toggle.active .bar:nth-child(1) {
@@ -281,7 +283,7 @@ img {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("images/hero/home-hero.jpg");
+  background-image: url("images/hero/home-hero-n.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -457,7 +459,9 @@ img {
   border: 1px solid var(--border-color);
   border-radius: 4px;
   overflow: hidden;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .service-card:hover {
@@ -520,7 +524,9 @@ img {
   overflow: hidden;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .project-img-wrapper {
