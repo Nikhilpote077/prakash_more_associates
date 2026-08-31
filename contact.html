@@ -2,29 +2,64 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      (function () {
+        var t = localStorage.getItem("pma-theme");
+        if (
+          t === "light" ||
+          (!t && window.matchMedia("(prefers-color-scheme: light)").matches)
+        ) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us | Prakash More & Associates | Mapusa, North Goa</title>
     <meta
       name="description"
       content="Get in touch with Prakash More & Associates for architecture, interior design, and Vastu consultations in Mapusa, North Goa. Call, WhatsApp, or send an enquiry."
     />
-    <link rel="canonical" href="https://www.prakashmoreassociates.com/contact.html" />
+    <link
+      rel="canonical"
+      href="https://www.prakashmoreassociates.com/contact.html"
+    />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#0f1115" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Prakash More & Associates" />
-    <meta property="og:title" content="Contact Us | Prakash More & Associates" />
-    <meta property="og:description" content="Reach out for architecture, interior design, and Vastu consultations in Mapusa, North Goa." />
-    <meta property="og:url" content="https://www.prakashmoreassociates.com/contact.html" />
-    <meta property="og:image" content="https://www.prakashmoreassociates.com/images/og/social-share.jpg" />
+    <meta
+      property="og:title"
+      content="Contact Us | Prakash More & Associates"
+    />
+    <meta
+      property="og:description"
+      content="Reach out for architecture, interior design, and Vastu consultations in Mapusa, North Goa."
+    />
+    <meta
+      property="og:url"
+      content="https://www.prakashmoreassociates.com/contact.html"
+    />
+    <meta
+      property="og:image"
+      content="https://www.prakashmoreassociates.com/images/og/social-share.jpg"
+    />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="en_IN" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Contact Us | Prakash More & Associates" />
-    <meta name="twitter:description" content="Reach out for architecture, interior design, and Vastu consultations in Mapusa, North Goa." />
-    <meta name="twitter:image" content="https://www.prakashmoreassociates.com/images/og/social-share.jpg" />
+    <meta
+      name="twitter:title"
+      content="Contact Us | Prakash More & Associates"
+    />
+    <meta
+      name="twitter:description"
+      content="Reach out for architecture, interior design, and Vastu consultations in Mapusa, North Goa."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.prakashmoreassociates.com/images/og/social-share.jpg"
+    />
 
     <link rel="icon" href="images/branding/favicon.ico" sizes="any" />
     <link rel="icon" type="image/svg+xml" href="images/branding/favicon.svg" />
@@ -44,8 +79,18 @@
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.prakashmoreassociates.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.prakashmoreassociates.com/contact.html" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.prakashmoreassociates.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact",
+            "item": "https://www.prakashmoreassociates.com/contact.html"
+          }
         ]
       }
     </script>
@@ -55,17 +100,48 @@
 
     <header class="header">
       <div class="container nav-container">
-        <a href="index.html" class="brand-logo" aria-label="Prakash More & Associates — Home">
-          <img src="images/branding/logo.svg" alt="Prakash More & Associates" class="logo-img" width="180" height="48" />
+        <a
+          href="index.html"
+          class="brand-logo"
+          aria-label="Prakash More & Associates — Home"
+        >
+          <img
+            src="images/branding/logo.svg"
+            alt="Prakash More & Associates"
+            class="logo-img"
+            width="180"
+            height="48"
+          />
         </a>
         <nav class="nav-links" aria-label="Primary navigation">
           <a href="index.html" class="nav-link">Home</a>
           <a href="about.html" class="nav-link">About</a>
           <a href="index.html#services" class="nav-link">Services</a>
           <a href="portfolio.html" class="nav-link">Portfolio</a>
-          <a href="contact.html" class="nav-link nav-btn active">Get in Touch</a>
+          <a href="contact.html" class="nav-link nav-btn active"
+            >Get in Touch</a
+          >
         </nav>
-        <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          aria-label="Toggle light / dark mode"
+        >
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0-15a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1zm0 18a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1zM4.22 4.22a1 1 0 0 1 1.42 0l.7.7a1 1 0 1 1-1.42 1.42l-.7-.7a1 1 0 0 1 0-1.42zm13.44 13.44a1 1 0 0 1 1.42 0l.7.7a1 1 0 0 1-1.42 1.42l-.7-.7a1 1 0 0 1 0-1.42zM1 12a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1zm18 0a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1zM4.22 19.78a1 1 0 0 1 0-1.42l.7-.7a1 1 0 1 1 1.42 1.42l-.7.7a1 1 0 0 1-1.42 0zM17.66 6.34a1 1 0 0 1 0-1.42l.7-.7a1 1 0 1 1 1.42 1.42l-.7.7a1 1 0 0 1-1.42 0z"
+            />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
+          </svg>
+        </button>
+        <button
+          class="mobile-menu-toggle"
+          id="menuToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -77,7 +153,7 @@
       <!-- Page Banner -->
       <section
         class="page-banner"
-        style="background-image: url('images/hero/contact-hero.jpg')"
+        style="background-image: url(&quot;images/hero/contact-hero.jpg&quot;)"
       >
         <div class="page-banner-overlay"></div>
         <div class="container page-banner-content">
@@ -93,7 +169,9 @@
         <div class="container grid grid-2">
           <div class="contact-info-block">
             <span class="section-tag">Start Your Project</span>
-            <h2 class="section-heading">Let's Create Something Extraordinary</h2>
+            <h2 class="section-heading">
+              Let's Create Something Extraordinary
+            </h2>
             <p>
               Ready to build or remodel your space? Reach out to schedule an
               initial architectural consultation or studio visit.
@@ -114,7 +192,9 @@
               <div class="c-item">
                 <span class="c-label">Email Address</span>
                 <p>
-                  <a href="mailto:prakash.more3909@gmail.com">prakash.more3909@gmail.com</a>
+                  <a href="mailto:prakash.more3909@gmail.com"
+                    >prakash.more3909@gmail.com</a
+                  >
                 </p>
               </div>
               <div class="c-item">
@@ -134,21 +214,41 @@
               netlify-honeypot="bot-field"
             >
               <input type="hidden" name="form-name" value="contact" />
-              <p class="hidden-field" style="position: absolute; left: -9999px;">
-                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+              <p class="hidden-field" style="position: absolute; left: -9999px">
+                <label
+                  >Don't fill this out if you're human: <input name="bot-field"
+                /></label>
               </p>
 
               <div class="form-group">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required placeholder="e.g. Rahul Sharma" />
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="e.g. Rahul Sharma"
+                />
               </div>
               <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required placeholder="name@example.com" />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="name@example.com"
+                />
               </div>
               <div class="form-group">
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" required placeholder="+91 9876543210" />
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  placeholder="+91 9876543210"
+                />
               </div>
               <div class="form-group">
                 <label for="service">Service Required</label>
@@ -178,15 +278,21 @@
       </section>
 
       <!-- Map -->
-      <section class="section" style="padding-top: 0;">
+      <section class="section" style="padding-top: 0">
         <div class="container">
-          <div style="border: 1px solid var(--border-color); border-radius: 4px; overflow: hidden;">
+          <div
+            style="
+              border: 1px solid var(--border-color);
+              border-radius: 4px;
+              overflow: hidden;
+            "
+          >
             <iframe
               title="Prakash More & Associates studio location — Khorlim, Mapusa, North Goa"
               src="https://www.google.com/maps?q=Khorlim,+Mapusa,+Goa+403507&output=embed"
               width="100%"
               height="380"
-              style="border: 0; display: block;"
+              style="border: 0; display: block"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
@@ -199,9 +305,18 @@
       <div class="container footer-container">
         <div class="footer-brand">
           <a href="index.html" class="footer-logo">
-            <img src="images/branding/logo.svg" alt="Prakash More & Associates Logo" class="footer-logo-img" width="160" height="42" loading="lazy" />
+            <img
+              src="images/branding/logo.svg"
+              alt="Prakash More & Associates Logo"
+              class="footer-logo-img"
+              width="160"
+              height="42"
+              loading="lazy"
+            />
           </a>
-          <p class="footer-tagline">Crafting refined architectural statements across Goa & beyond.</p>
+          <p class="footer-tagline">
+            Crafting refined architectural statements across Goa & beyond.
+          </p>
         </div>
         <nav class="footer-links" aria-label="Footer navigation">
           <a href="index.html">Home</a>
@@ -216,9 +331,17 @@
       </div>
     </footer>
 
-    <a href="https://wa.me/919743203909" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <a
+      href="https://wa.me/919743203909"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+    >
       <svg viewBox="0 0 32 32" class="whatsapp-icon" aria-hidden="true">
-        <path d="M16 2a13 13 0 0 0-11.3 19.5L3 29l7.7-1.6A13 13 0 1 0 16 2zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-4 1 1-3.9-.2-.4A10.6 10.6 0 1 1 16 25.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a9 9 0 0 1-2.6-1.6 9.9 9.9 0 0 1-1.8-2.3c-.2-.3 0-.5.1-.6s.3-.4.5-.6l.3-.4c.1-.2 0-.4 0-.5s-.7-1.7-1-2.3c-.3-.6-.6-.5-.8-.5h-.7c-.2 0-.7.1-1 .5a4.3 4.3 0 0 0-1.4 3.2c0 1.9 1.4 3.7 1.6 4 .2.2 2.7 4.1 6.5 5.8 2.6 1.1 3.2 1 4.4.8.8-.1 2.4-1 2.7-1.9s.3-1.8.2-1.9c-.1-.1-.3-.2-.6-.4z" />
+        <path
+          d="M16 2a13 13 0 0 0-11.3 19.5L3 29l7.7-1.6A13 13 0 1 0 16 2zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-4 1 1-3.9-.2-.4A10.6 10.6 0 1 1 16 25.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a9 9 0 0 1-2.6-1.6 9.9 9.9 0 0 1-1.8-2.3c-.2-.3 0-.5.1-.6s.3-.4.5-.6l.3-.4c.1-.2 0-.4 0-.5s-.7-1.7-1-2.3c-.3-.6-.6-.5-.8-.5h-.7c-.2 0-.7.1-1 .5a4.3 4.3 0 0 0-1.4 3.2c0 1.9 1.4 3.7 1.6 4 .2.2 2.7 4.1 6.5 5.8 2.6 1.1 3.2 1 4.4.8.8-.1 2.4-1 2.7-1.9s.3-1.8.2-1.9c-.1-.1-.3-.2-.6-.4z"
+        />
       </svg>
     </a>
 

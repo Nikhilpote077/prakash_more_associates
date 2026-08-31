@@ -2,29 +2,64 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      (function () {
+        var t = localStorage.getItem("pma-theme");
+        if (
+          t === "light" ||
+          (!t && window.matchMedia("(prefers-color-scheme: light)").matches)
+        ) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Prakash More & Associates | Architecture & Interior Projects, Goa</title>
+    <title>
+      Portfolio | Prakash More & Associates | Architecture & Interior Projects,
+      Goa
+    </title>
     <meta
       name="description"
       content="Explore residential, interior, and Vastu-harmonized architecture projects by Prakash More & Associates across Mapusa, Panaji, Calangute, and North Goa."
     />
-    <link rel="canonical" href="https://www.prakashmoreassociates.com/portfolio.html" />
+    <link
+      rel="canonical"
+      href="https://www.prakashmoreassociates.com/portfolio.html"
+    />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#0f1115" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Prakash More & Associates" />
     <meta property="og:title" content="Portfolio | Prakash More & Associates" />
-    <meta property="og:description" content="Residential, interior, and Vastu-harmonized architecture projects across Goa." />
-    <meta property="og:url" content="https://www.prakashmoreassociates.com/portfolio.html" />
-    <meta property="og:image" content="https://www.prakashmoreassociates.com/images/og/social-share.jpg" />
+    <meta
+      property="og:description"
+      content="Residential, interior, and Vastu-harmonized architecture projects across Goa."
+    />
+    <meta
+      property="og:url"
+      content="https://www.prakashmoreassociates.com/portfolio.html"
+    />
+    <meta
+      property="og:image"
+      content="https://www.prakashmoreassociates.com/images/og/social-share.jpg"
+    />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="en_IN" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Portfolio | Prakash More & Associates" />
-    <meta name="twitter:description" content="Residential, interior, and Vastu-harmonized architecture projects across Goa." />
-    <meta name="twitter:image" content="https://www.prakashmoreassociates.com/images/og/social-share.jpg" />
+    <meta
+      name="twitter:title"
+      content="Portfolio | Prakash More & Associates"
+    />
+    <meta
+      name="twitter:description"
+      content="Residential, interior, and Vastu-harmonized architecture projects across Goa."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.prakashmoreassociates.com/images/og/social-share.jpg"
+    />
 
     <link rel="icon" href="images/branding/favicon.ico" sizes="any" />
     <link rel="icon" type="image/svg+xml" href="images/branding/favicon.svg" />
@@ -44,8 +79,18 @@
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.prakashmoreassociates.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://www.prakashmoreassociates.com/portfolio.html" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.prakashmoreassociates.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Portfolio",
+            "item": "https://www.prakashmoreassociates.com/portfolio.html"
+          }
         ]
       }
     </script>
@@ -55,8 +100,18 @@
 
     <header class="header">
       <div class="container nav-container">
-        <a href="index.html" class="brand-logo" aria-label="Prakash More & Associates — Home">
-          <img src="images/branding/logo.svg" alt="Prakash More & Associates" class="logo-img" width="180" height="48" />
+        <a
+          href="index.html"
+          class="brand-logo"
+          aria-label="Prakash More & Associates — Home"
+        >
+          <img
+            src="images/branding/logo.svg"
+            alt="Prakash More & Associates"
+            class="logo-img"
+            width="180"
+            height="48"
+          />
         </a>
         <nav class="nav-links" aria-label="Primary navigation">
           <a href="index.html" class="nav-link">Home</a>
@@ -65,7 +120,26 @@
           <a href="portfolio.html" class="nav-link active">Portfolio</a>
           <a href="contact.html" class="nav-link nav-btn">Get in Touch</a>
         </nav>
-        <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          aria-label="Toggle light / dark mode"
+        >
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0-15a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1zm0 18a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1zM4.22 4.22a1 1 0 0 1 1.42 0l.7.7a1 1 0 1 1-1.42 1.42l-.7-.7a1 1 0 0 1 0-1.42zm13.44 13.44a1 1 0 0 1 1.42 0l.7.7a1 1 0 0 1-1.42 1.42l-.7-.7a1 1 0 0 1 0-1.42zM1 12a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1zm18 0a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1zM4.22 19.78a1 1 0 0 1 0-1.42l.7-.7a1 1 0 1 1 1.42 1.42l-.7.7a1 1 0 0 1-1.42 0zM17.66 6.34a1 1 0 0 1 0-1.42l.7-.7a1 1 0 1 1 1.42 1.42l-.7.7a1 1 0 0 1-1.42 0z"
+            />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
+          </svg>
+        </button>
+        <button
+          class="mobile-menu-toggle"
+          id="menuToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -77,12 +151,15 @@
       <!-- Page Banner -->
       <section
         class="page-banner"
-        style="background-image: url('images/hero/portfolio-hero.jpg')"
+        style="
+          background-image: url(&quot;images/hero/portfolio-hero.jpg&quot;);
+        "
       >
         <div class="page-banner-overlay"></div>
         <div class="container page-banner-content">
           <p class="breadcrumb">
-            <a href="index.html">Home</a> / <span class="current">Portfolio</span>
+            <a href="index.html">Home</a> /
+            <span class="current">Portfolio</span>
           </p>
           <h1 class="page-banner-title">Our Portfolio</h1>
         </div>
@@ -91,19 +168,44 @@
       <!-- Portfolio Grid -->
       <section class="section projects-section" style="border-bottom: none">
         <div class="container">
-          <div class="portfolio-filters" role="tablist" aria-label="Filter projects by category">
-            <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="residential">Residential Architecture</button>
-            <button class="filter-btn" data-filter="interior">Interior Design</button>
-            <button class="filter-btn" data-filter="vastu">Vastu & Elevation</button>
-            <button class="filter-btn" data-filter="commercial">Commercial</button>
+          <div
+            class="portfolio-filters"
+            role="tablist"
+            aria-label="Filter projects by category"
+          >
+            <button class="filter-btn active" data-filter="all">
+              All Projects
+            </button>
+            <button class="filter-btn" data-filter="residential">
+              Residential Architecture
+            </button>
+            <button class="filter-btn" data-filter="interior">
+              Interior Design
+            </button>
+            <button class="filter-btn" data-filter="vastu">
+              Vastu & Elevation
+            </button>
+            <button class="filter-btn" data-filter="commercial">
+              Commercial
+            </button>
           </div>
 
           <div class="projects-grid" id="projectsGrid">
             <!-- Villa Minimalia -->
-            <article class="project-card" data-category="residential" data-gallery="villa-minimalia">
+            <article
+              class="project-card"
+              data-category="residential"
+              data-gallery="villa-minimalia"
+            >
               <div class="project-img-wrapper">
-                <img src="images/projects/villa-minimalia/01-exterior.jpg" alt="Villa Minimalia — exterior view, Mapusa" class="project-img" width="1200" height="900" loading="lazy" />
+                <img
+                  src="images/projects/villa-minimalia/01-exterior.jpg"
+                  alt="Villa Minimalia — exterior view, Mapusa"
+                  class="project-img"
+                  width="1200"
+                  height="900"
+                  loading="lazy"
+                />
                 <div class="project-overlay">
                   <span class="project-category">Residential Architecture</span>
                   <h3 class="project-name">Villa Minimalia</h3>
@@ -113,9 +215,20 @@
             </article>
 
             <!-- Grand Living Suite -->
-            <article class="project-card" data-category="interior" data-gallery="grand-living-suite">
+            <article
+              class="project-card"
+              data-category="interior"
+              data-gallery="grand-living-suite"
+            >
               <div class="project-img-wrapper">
-                <img src="images/projects/grand-living-suite/01-living-area.jpg" alt="The Grand Living Suite — living area, Panaji" class="project-img" width="1200" height="900" loading="lazy" />
+                <img
+                  src="images/projects/grand-living-suite/01-living-area.jpg"
+                  alt="The Grand Living Suite — living area, Panaji"
+                  class="project-img"
+                  width="1200"
+                  height="900"
+                  loading="lazy"
+                />
                 <div class="project-overlay">
                   <span class="project-category">Interior Design</span>
                   <h3 class="project-name">The Grand Living Suite</h3>
@@ -125,9 +238,20 @@
             </article>
 
             <!-- Coastal Haven Villa -->
-            <article class="project-card" data-category="vastu" data-gallery="coastal-haven-villa">
+            <article
+              class="project-card"
+              data-category="vastu"
+              data-gallery="coastal-haven-villa"
+            >
               <div class="project-img-wrapper">
-                <img src="images/projects/coastal-haven-villa/01-exterior.jpg" alt="Coastal Haven Villa — exterior view, Calangute" class="project-img" width="1200" height="900" loading="lazy" />
+                <img
+                  src="images/projects/coastal-haven-villa/01-exterior.jpg"
+                  alt="Coastal Haven Villa — exterior view, Calangute"
+                  class="project-img"
+                  width="1200"
+                  height="900"
+                  loading="lazy"
+                />
                 <div class="project-overlay">
                   <span class="project-category">Vastu & Elevation</span>
                   <h3 class="project-name">Coastal Haven Villa</h3>
@@ -137,9 +261,20 @@
             </article>
 
             <!-- Serene Bedroom Retreat -->
-            <article class="project-card" data-category="interior" data-gallery="serene-bedroom-retreat">
+            <article
+              class="project-card"
+              data-category="interior"
+              data-gallery="serene-bedroom-retreat"
+            >
               <div class="project-img-wrapper">
-                <img src="images/projects/serene-bedroom-retreat/01-bedroom.jpg" alt="Serene Bedroom Retreat, Mapusa" class="project-img" width="1200" height="900" loading="lazy" />
+                <img
+                  src="images/projects/serene-bedroom-retreat/01-bedroom.jpg"
+                  alt="Serene Bedroom Retreat, Mapusa"
+                  class="project-img"
+                  width="1200"
+                  height="900"
+                  loading="lazy"
+                />
                 <div class="project-overlay">
                   <span class="project-category">Interior Design</span>
                   <h3 class="project-name">Serene Bedroom Retreat</h3>
@@ -149,9 +284,20 @@
             </article>
 
             <!-- Modern Modular Kitchen -->
-            <article class="project-card" data-category="interior" data-gallery="modern-modular-kitchen">
+            <article
+              class="project-card"
+              data-category="interior"
+              data-gallery="modern-modular-kitchen"
+            >
               <div class="project-img-wrapper">
-                <img src="images/projects/modern-modular-kitchen/01-kitchen.jpg" alt="Modern Modular Kitchen, Porvorim" class="project-img" width="1200" height="900" loading="lazy" />
+                <img
+                  src="images/projects/modern-modular-kitchen/01-kitchen.jpg"
+                  alt="Modern Modular Kitchen, Porvorim"
+                  class="project-img"
+                  width="1200"
+                  height="900"
+                  loading="lazy"
+                />
                 <div class="project-overlay">
                   <span class="project-category">Interior Design</span>
                   <h3 class="project-name">Modern Modular Kitchen</h3>
@@ -161,9 +307,20 @@
             </article>
 
             <!-- Panjim Office Interior -->
-            <article class="project-card" data-category="commercial" data-gallery="panjim-office-interior">
+            <article
+              class="project-card"
+              data-category="commercial"
+              data-gallery="panjim-office-interior"
+            >
               <div class="project-img-wrapper">
-                <img src="images/projects/panjim-office-interior/01-workspace.jpg" alt="Panjim Office Interior, Panaji" class="project-img" width="1200" height="900" loading="lazy" />
+                <img
+                  src="images/projects/panjim-office-interior/01-workspace.jpg"
+                  alt="Panjim Office Interior, Panaji"
+                  class="project-img"
+                  width="1200"
+                  height="900"
+                  loading="lazy"
+                />
                 <div class="project-overlay">
                   <span class="project-category">Commercial Interior</span>
                   <h3 class="project-name">Panjim Office Interior</h3>
@@ -173,7 +330,11 @@
             </article>
           </div>
 
-          <p id="noResultsMsg" class="text-center" style="display: none; margin-top: 40px;">
+          <p
+            id="noResultsMsg"
+            class="text-center"
+            style="display: none; margin-top: 40px"
+          >
             No projects found in this category yet.
           </p>
         </div>
@@ -194,11 +355,32 @@
     </main>
 
     <!-- Lightbox Modal -->
-    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Project image gallery" hidden>
-      <button class="lightbox-close" id="lightboxClose" aria-label="Close gallery">&times;</button>
-      <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#10094;</button>
+    <div
+      class="lightbox"
+      id="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Project image gallery"
+      hidden
+    >
+      <button
+        class="lightbox-close"
+        id="lightboxClose"
+        aria-label="Close gallery"
+      >
+        &times;
+      </button>
+      <button
+        class="lightbox-prev"
+        id="lightboxPrev"
+        aria-label="Previous image"
+      >
+        &#10094;
+      </button>
       <img src="" alt="" class="lightbox-img" id="lightboxImg" />
-      <button class="lightbox-next" id="lightboxNext" aria-label="Next image">&#10095;</button>
+      <button class="lightbox-next" id="lightboxNext" aria-label="Next image">
+        &#10095;
+      </button>
       <p class="lightbox-caption" id="lightboxCaption"></p>
     </div>
 
@@ -206,9 +388,18 @@
       <div class="container footer-container">
         <div class="footer-brand">
           <a href="index.html" class="footer-logo">
-            <img src="images/branding/logo.svg" alt="Prakash More & Associates Logo" class="footer-logo-img" width="160" height="42" loading="lazy" />
+            <img
+              src="images/branding/logo.svg"
+              alt="Prakash More & Associates Logo"
+              class="footer-logo-img"
+              width="160"
+              height="42"
+              loading="lazy"
+            />
           </a>
-          <p class="footer-tagline">Crafting refined architectural statements across Goa & beyond.</p>
+          <p class="footer-tagline">
+            Crafting refined architectural statements across Goa & beyond.
+          </p>
         </div>
         <nav class="footer-links" aria-label="Footer navigation">
           <a href="index.html">Home</a>
@@ -223,9 +414,17 @@
       </div>
     </footer>
 
-    <a href="https://wa.me/919743203909" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <a
+      href="https://wa.me/919743203909"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+    >
       <svg viewBox="0 0 32 32" class="whatsapp-icon" aria-hidden="true">
-        <path d="M16 2a13 13 0 0 0-11.3 19.5L3 29l7.7-1.6A13 13 0 1 0 16 2zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-4 1 1-3.9-.2-.4A10.6 10.6 0 1 1 16 25.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a9 9 0 0 1-2.6-1.6 9.9 9.9 0 0 1-1.8-2.3c-.2-.3 0-.5.1-.6s.3-.4.5-.6l.3-.4c.1-.2 0-.4 0-.5s-.7-1.7-1-2.3c-.3-.6-.6-.5-.8-.5h-.7c-.2 0-.7.1-1 .5a4.3 4.3 0 0 0-1.4 3.2c0 1.9 1.4 3.7 1.6 4 .2.2 2.7 4.1 6.5 5.8 2.6 1.1 3.2 1 4.4.8.8-.1 2.4-1 2.7-1.9s.3-1.8.2-1.9c-.1-.1-.3-.2-.6-.4z" />
+        <path
+          d="M16 2a13 13 0 0 0-11.3 19.5L3 29l7.7-1.6A13 13 0 1 0 16 2zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-4 1 1-3.9-.2-.4A10.6 10.6 0 1 1 16 25.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a9 9 0 0 1-2.6-1.6 9.9 9.9 0 0 1-1.8-2.3c-.2-.3 0-.5.1-.6s.3-.4.5-.6l.3-.4c.1-.2 0-.4 0-.5s-.7-1.7-1-2.3c-.3-.6-.6-.5-.8-.5h-.7c-.2 0-.7.1-1 .5a4.3 4.3 0 0 0-1.4 3.2c0 1.9 1.4 3.7 1.6 4 .2.2 2.7 4.1 6.5 5.8 2.6 1.1 3.2 1 4.4.8.8-.1 2.4-1 2.7-1.9s.3-1.8.2-1.9c-.1-.1-.3-.2-.6-.4z"
+        />
       </svg>
     </a>
 
@@ -240,32 +439,77 @@
     <script>
       window.projectGalleries = {
         "villa-minimalia": [
-          { src: "images/projects/villa-minimalia/01-exterior.jpg", caption: "Villa Minimalia — Exterior" },
-          { src: "images/projects/villa-minimalia/02-living-room.jpg", caption: "Villa Minimalia — Living Room" },
-          { src: "images/projects/villa-minimalia/03-facade-detail.jpg", caption: "Villa Minimalia — Facade Detail" }
+          {
+            src: "images/projects/villa-minimalia/01-exterior.jpg",
+            caption: "Villa Minimalia — Exterior",
+          },
+          {
+            src: "images/projects/villa-minimalia/02-living-room.jpg",
+            caption: "Villa Minimalia — Living Room",
+          },
+          {
+            src: "images/projects/villa-minimalia/03-facade-detail.jpg",
+            caption: "Villa Minimalia — Facade Detail",
+          },
         ],
         "grand-living-suite": [
-          { src: "images/projects/grand-living-suite/01-living-area.jpg", caption: "The Grand Living Suite — Living Area" },
-          { src: "images/projects/grand-living-suite/02-dining.jpg", caption: "The Grand Living Suite — Dining" },
-          { src: "images/projects/grand-living-suite/03-lighting-detail.jpg", caption: "The Grand Living Suite — Lighting Detail" }
+          {
+            src: "images/projects/grand-living-suite/01-living-area.jpg",
+            caption: "The Grand Living Suite — Living Area",
+          },
+          {
+            src: "images/projects/grand-living-suite/02-dining.jpg",
+            caption: "The Grand Living Suite — Dining",
+          },
+          {
+            src: "images/projects/grand-living-suite/03-lighting-detail.jpg",
+            caption: "The Grand Living Suite — Lighting Detail",
+          },
         ],
         "coastal-haven-villa": [
-          { src: "images/projects/coastal-haven-villa/01-exterior.jpg", caption: "Coastal Haven Villa — Exterior" },
-          { src: "images/projects/coastal-haven-villa/02-courtyard.jpg", caption: "Coastal Haven Villa — Courtyard" },
-          { src: "images/projects/coastal-haven-villa/03-interior.jpg", caption: "Coastal Haven Villa — Interior" }
+          {
+            src: "images/projects/coastal-haven-villa/01-exterior.jpg",
+            caption: "Coastal Haven Villa — Exterior",
+          },
+          {
+            src: "images/projects/coastal-haven-villa/02-courtyard.jpg",
+            caption: "Coastal Haven Villa — Courtyard",
+          },
+          {
+            src: "images/projects/coastal-haven-villa/03-interior.jpg",
+            caption: "Coastal Haven Villa — Interior",
+          },
         ],
         "serene-bedroom-retreat": [
-          { src: "images/projects/serene-bedroom-retreat/01-bedroom.jpg", caption: "Serene Bedroom Retreat — Bedroom" },
-          { src: "images/projects/serene-bedroom-retreat/02-wardrobe.jpg", caption: "Serene Bedroom Retreat — Wardrobe Detail" }
+          {
+            src: "images/projects/serene-bedroom-retreat/01-bedroom.jpg",
+            caption: "Serene Bedroom Retreat — Bedroom",
+          },
+          {
+            src: "images/projects/serene-bedroom-retreat/02-wardrobe.jpg",
+            caption: "Serene Bedroom Retreat — Wardrobe Detail",
+          },
         ],
         "modern-modular-kitchen": [
-          { src: "images/projects/modern-modular-kitchen/01-kitchen.jpg", caption: "Modern Modular Kitchen" },
-          { src: "images/projects/modern-modular-kitchen/02-detail.jpg", caption: "Modern Modular Kitchen — Detail" }
+          {
+            src: "images/projects/modern-modular-kitchen/01-kitchen.jpg",
+            caption: "Modern Modular Kitchen",
+          },
+          {
+            src: "images/projects/modern-modular-kitchen/02-detail.jpg",
+            caption: "Modern Modular Kitchen — Detail",
+          },
         ],
         "panjim-office-interior": [
-          { src: "images/projects/panjim-office-interior/01-workspace.jpg", caption: "Panjim Office Interior — Workspace" },
-          { src: "images/projects/panjim-office-interior/02-reception.jpg", caption: "Panjim Office Interior — Reception" }
-        ]
+          {
+            src: "images/projects/panjim-office-interior/01-workspace.jpg",
+            caption: "Panjim Office Interior — Workspace",
+          },
+          {
+            src: "images/projects/panjim-office-interior/02-reception.jpg",
+            caption: "Panjim Office Interior — Reception",
+          },
+        ],
       };
     </script>
     <script src="script.js" defer></script>

@@ -9,6 +9,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const scrollTopBtn = document.getElementById("scrollTopBtn");
   const contactForm = document.getElementById("contactForm");
 
+  // --- Day / Night (Light / Dark) Theme Toggle ---
+  const themeToggle = document.getElementById("themeToggle");
+  const THEME_KEY = "pma-theme";
+
+  const applyTheme = (theme) => {
+    if (theme === "light") {
+      document.documentElement.setAttribute("data-theme", "light");
+    } else {
+      document.documentElement.removeAttribute("data-theme");
+    }
+  };
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const isLight =
+        document.documentElement.getAttribute("data-theme") === "light";
+      const next = isLight ? "dark" : "light";
+      applyTheme(next);
+      localStorage.setItem(THEME_KEY, next);
+    });
+  }
+
   // --- Mobile Navigation ---
   if (menuToggle && navLinks) {
     menuToggle.addEventListener("click", () => {
@@ -141,6 +163,18 @@ document.addEventListener("DOMContentLoaded", () => {
       // overridden; only intercept to show inline confirmation.
       const formStatus = document.getElementById("formStatus");
       if (!formStatus) return; // no custom UI present, allow default submit
+
+      // Netlify Forms only works when served by Netlify (http/https).
+      // Opening the file directly (file://) can never submit successfully,
+      // so skip the AJAX intercept and let the browser show its own
+      // (also failing) native submit rather than an unhandled fetch error.
+      if (window.location.protocol === "file:") {
+        e.preventDefault();
+        formStatus.textContent =
+          "Forms only work on the live deployed site, not when opened as a local file.";
+        formStatus.classList.add("visible", "error");
+        return;
+      }
 
       e.preventDefault();
       const data = new FormData(contactForm);
