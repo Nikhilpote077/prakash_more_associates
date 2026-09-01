@@ -1540,3 +1540,36 @@ select:focus-visible {
   z-index: 2001;
   transition: width 0.1s ease-out;
 }
+
+/* ==========================================
+   FOOTER SOCIAL ICONS
+   ========================================== */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.social-icon:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+.social-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
