@@ -206,3 +206,15 @@ window.addEventListener("load", () => {
     setTimeout(() => loader.classList.add("loaded"), 300);
   }
 });
+const scrollProgress = document.getElementById("scrollProgress");
+
+const onScroll = () => {
+  // ...existing header/scrollTopBtn code stays...
+  if (scrollProgress) {
+    const scrollHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
+    const percent =
+      scrollHeight > 0 ? (window.scrollY / scrollHeight) * 100 : 0;
+    scrollProgress.style.width = percent + "%";
+  }
+};

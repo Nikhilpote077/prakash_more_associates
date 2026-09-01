@@ -1530,3 +1530,13 @@ select:focus-visible {
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.55; transform: scale(0.9); }
 }
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--accent-gold);
+  z-index: 2001;
+  transition: width 0.1s ease-out;
+}
