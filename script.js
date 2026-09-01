@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
-
+  const scrollProgress = document.getElementById("scrollProgress");
   // --- Sticky Header Shrink + Scroll-to-Top Visibility ---
   const onScroll = () => {
     if (header) {
@@ -61,6 +61,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     if (scrollTopBtn) {
       scrollTopBtn.classList.toggle("visible", window.scrollY > 300);
+    }
+    if (scrollProgress) {
+      const scrollHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const percent =
+        scrollHeight > 0 ? (window.scrollY / scrollHeight) * 100 : 0;
+      scrollProgress.style.width = percent + "%";
     }
   };
   window.addEventListener("scroll", onScroll, { passive: true });
@@ -206,15 +213,3 @@ window.addEventListener("load", () => {
     setTimeout(() => loader.classList.add("loaded"), 300);
   }
 });
-const scrollProgress = document.getElementById("scrollProgress");
-
-const onScroll = () => {
-  // ...existing header/scrollTopBtn code stays...
-  if (scrollProgress) {
-    const scrollHeight =
-      document.documentElement.scrollHeight - window.innerHeight;
-    const percent =
-      scrollHeight > 0 ? (window.scrollY / scrollHeight) * 100 : 0;
-    scrollProgress.style.width = percent + "%";
-  }
-};
