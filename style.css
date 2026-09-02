@@ -1573,3 +1573,76 @@ select:focus-visible {
   height: 18px;
   fill: currentColor;
 }
+
+
+
+/* ==========================================
+   FAQ ACCORDION
+   ========================================== */
+.faq-section {
+  background: var(--bg-secondary);
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border-color);
+  padding: 18px 0;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 1.05rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  font-size: 1.4rem;
+  color: var(--accent-gold);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  margin-top: 12px;
+  margin-bottom: 0;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ==========================================
+   TESTIMONIAL STAR RATINGS
+   ========================================== */
+.testimonial-stars {
+  color: var(--accent-gold);
+  font-size: 1rem;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+/* ==========================================
+   FOOTER CONTACT LINE
+   ========================================== */
+.footer-contact-line {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 6px;
+}
