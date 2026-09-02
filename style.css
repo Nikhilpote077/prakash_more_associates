@@ -194,12 +194,14 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
 }
 
 .brand-logo {
   display: flex;
   align-items: center;
   text-decoration: none;
+  min-width: 0;
 }
 
 .logo-img {
@@ -915,6 +917,21 @@ img {
 
 /* Extra Small Devices / Phones (Max 480px) */
 @media (max-width: 480px) {
+  .nav-container {
+    gap: 8px;
+  }
+
+  .header-call-btn,
+  .theme-toggle {
+    width: 34px;
+    height: 34px;
+  }
+
+  .header-call-btn svg,
+  .theme-toggle svg {
+    width: 15px;
+    height: 15px;
+  }
   .container {
     width: 92%;
   }
@@ -1645,4 +1662,50 @@ select:focus-visible {
   font-size: 0.85rem;
   color: var(--text-secondary);
   margin-top: 6px;
+}
+
+
+/* ==========================================
+   HEADER CLICK-TO-CALL BUTTON
+   ========================================== */
+.header-call-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border: 1px solid var(--accent-gold);
+  border-radius: 20px;
+  background: rgba(197, 168, 128, 0.12);
+  color: var(--accent-gold);
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.header-call-btn:hover {
+  background: var(--accent-gold);
+  color: #0d0e11;
+}
+
+.header-call-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+@media (max-width: 860px) {
+  .header-call-text {
+    display: none;
+  }
+
+  .header-call-btn {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    border-radius: 50%;
+  }
 }
