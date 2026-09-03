@@ -84,26 +84,42 @@ document.addEventListener("DOMContentLoaded", () => {
   const projectCards = document.querySelectorAll("#projectsGrid .project-card");
   const noResultsMsg = document.getElementById("noResultsMsg");
 
+  const applyFilter = (filter) => {
+    let visibleCount = 0;
+    projectCards.forEach((card) => {
+      const match = filter === "all" || card.dataset.category === filter;
+      card.hidden = !match;
+      if (match) visibleCount++;
+    });
+    if (noResultsMsg) {
+      noResultsMsg.style.display = visibleCount === 0 ? "block" : "none";
+    }
+  };
+
   if (filterBtns.length && projectCards.length) {
     filterBtns.forEach((btn) => {
       btn.addEventListener("click", () => {
         filterBtns.forEach((b) => b.classList.remove("active"));
         btn.classList.add("active");
-
-        const filter = btn.dataset.filter;
-        let visibleCount = 0;
-
-        projectCards.forEach((card) => {
-          const match = filter === "all" || card.dataset.category === filter;
-          card.hidden = !match;
-          if (match) visibleCount++;
-        });
-
-        if (noResultsMsg) {
-          noResultsMsg.style.display = visibleCount === 0 ? "block" : "none";
-        }
+        applyFilter(btn.dataset.filter);
       });
     });
+
+    // Deep-link support: /portfolio.html?category=vastu pre-selects a filter
+    // (used by the "Read More" links on the Home page service cards)
+    const requestedCategory = new URLSearchParams(window.location.search).get(
+      "category",
+    );
+    if (requestedCategory) {
+      const matchingBtn = document.querySelector(
+        `.filter-btn[data-filter="${requestedCategory}"]`,
+      );
+      if (matchingBtn) {
+        filterBtns.forEach((b) => b.classList.remove("active"));
+        matchingBtn.classList.add("active");
+        applyFilter(requestedCategory);
+      }
+    }
   }
 
   // --- Lightbox Gallery (Portfolio page) ---

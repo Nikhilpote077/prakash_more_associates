@@ -1736,3 +1736,30 @@ select:focus-visible {
   4% { transform: rotate(14deg); }
   6% { transform: rotate(-8deg); }
 }
+
+
+/* ==========================================
+   SERVICE CARD "READ MORE" LINK
+   ========================================== */
+.service-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  transition: var(--transition);
+}
+
+.service-read-more:hover {
+  gap: 10px;
+  color: var(--accent-gold-hover);
+}
+
+.service-read-more svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+  transition: transform 0.2s ease;
+}
