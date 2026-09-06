@@ -28,9 +28,9 @@ images/
 │
 ├── services/               One image per service card (800x600, shown at ~1200x900)
 │   ├── vastu-planning.jpg
-│   ├── elevation-design.jpg
+│   ├── elevation-design.jpeg
 │   ├── home-interior.jpg
-│   ├── modular-kitchen.jpg
+│   ├── modular-kitchen.jpeg
 │   ├── living-room.jpg
 │   └── bedroom-design.jpg
 │
