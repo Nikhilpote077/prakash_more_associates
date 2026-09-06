@@ -27,19 +27,19 @@ images/
 │   └── contact-hero.jpg    Contact page banner (1920x500)
 │
 ├── services/               One image per service card (800x600, shown at ~1200x900)
-│   ├── vastu-planning.jpg
+│   ├── vastu-planning.jpeg
 │   ├── elevation-design.jpeg
-│   ├── home-interior.jpg
+│   ├── home-interior.jpeg
 │   ├── modular-kitchen.jpeg
-│   ├── living-room.jpg
-│   └── bedroom-design.jpg
+│   ├── living-room.jpeg
+│   └── bedroom-design.jpeg
 │
 ├── projects/               One subfolder per portfolio project.
 │   │                       Add/remove numbered files as needed — the gallery
 │   │                       on portfolio.html reads directly from these folders.
 │   ├── villa-minimalia/
 │   │   ├── 01-exterior.jpg       (this is used as the cover/thumbnail image)
-│   │   ├── 02-living-room.jpg
+│   │   ├── 02-living-room.jpeg
 │   │   └── 03-facade-detail.jpg
 │   ├── grand-living-suite/
 │   ├── coastal-haven-villa/
