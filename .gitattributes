@@ -1,0 +1,12 @@
+# Normalize all text files to LF in the repository.
+# This prevents Windows/Mac/Linux from showing every file as
+# "modified" just because of CRLF vs LF differences.
+* text=auto eol=lf
+
+# Treat these as binary (never convert line endings)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.svg text eol=lf
+*.ico binary
+*.webp binary
